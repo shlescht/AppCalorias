@@ -25,6 +25,8 @@ export const FoodItem = ({food, todays, onComplete}: FoodItemProps) => {
 
   const handleDeleteTodaysFoodButton = async (item: string) => {
     await handleDeleteTodaysFood(item);
+    // al ponerle el ?. (interrogacion + punto) antes del constructor
+    // dice que si la funcion existe la ejecute, y si no, no.
     onComplete?.();
   };
 
